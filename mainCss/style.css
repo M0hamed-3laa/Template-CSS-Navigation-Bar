@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #222327;
+}
+.navigetion {
+  position: relative;
+  width: 450px;
+  height: 80px;
+  background: #2f2f2f;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+}
+.navigetion ul {
+  position: relative;
+  display: flex;
+  width: 400px;
+}
+.navigetion ul li {
+  position: relative;
+  list-style: none;
+  width: 80px;
+  height: 80px;
+}
+.navigetion ul li a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+}
+.navigetion ul li a .icon {
+  position: relative;
+  display: block;
+  line-height: 85px;
+  font-size: 1.5em;
+  transition: 0.5s;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+}
+.navigetion ul li a:hover .icon {
+  color: rgba(255, 255, 255, 1);
+}
+
+.navigetion ul li.active a .icon {
+  color: #29fd53;
+  transform: translateY(-8px);
+}
+.navigetion ul li a .text {
+  position: absolute;
+  font-weight: 600;
+  font-size: 0.6em;
+  color: #fff;
+  text-transform: uppercase;
+  transform: translateY(0px);
+  letter-spacing: 0.05em;
+  opacity: 0;
+  z-index: 10;
+}
+.navigetion ul li.active a .text {
+  opacity: 1;
+  transform: translateY(16px);
+}
+.indicaotr {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.indicaotr::before {
+  content: "";
+  position: absolute;
+  height: 16px;
+  width: 80px;
+  bottom: 14px;
+  background: #29fd53;
+  border-radius: 10px;
+}
+.navigetion ul li:nth-child(2).active ~ .indicaotr {
+  transform: translateX(calc(80px * 1));
+}
+.navigetion ul li:nth-child(3).active ~ .indicaotr {
+  transform: translateX(calc(80px * 2));
+}
+.navigetion ul li:nth-child(4).active ~ .indicaotr {
+  transform: translateX(calc(80px * 3));
+}
+.navigetion ul li:nth-child(5).active ~ .indicaotr {
+  transform: translateX(calc(80px * 4));
+}
